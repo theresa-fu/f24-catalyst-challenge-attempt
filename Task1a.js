@@ -22,7 +22,20 @@ const todoList = [];
  * 
  */
 function addAndPrintTodos() {
-    // YOUR CODE HERE
+    // adds first to-do
+    todoList.push("1. Apply to y/cs!");
+
+    // adds second to-do
+    todoList.push("2. Pick out my classes"); 
+
+    // adds third to-do
+    todoList.push("3. Have dinner with my suite");
+
+    // prints out each to-do
+    for(let i = 0; i < todoList.length; i++)
+    {
+        console.log(todoList[i] + "\n");
+    }
 }
 
 /**
@@ -36,7 +49,7 @@ function mainTask1a() {
 
 // This bit of code ensures that a main method exists! If it doesn't, then it throws an error
 if (require.main === module) {
-    // unlike other languages like Java, there is no built in main method. We use a funciton called
+    // unlike other languages like Java, there is no built in main method. We use a function called
     // main by convention.
     mainTask1a();
 }

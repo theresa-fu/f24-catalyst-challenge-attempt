@@ -23,10 +23,14 @@ todoList = [
     "Have dinner with my suite"
 ];
  */
+
 function deleteTodo(index) {
     console.log("Before: " + todoList)
-    // YOUR CODE HERE
-    console.log("After:" + todoList)
+
+    //gets rid of the string at the index specified; modifies array
+    todoList.splice(index, 1);
+    
+    console.log("After: " + todoList)
 }
 
 /**

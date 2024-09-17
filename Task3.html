@@ -7,9 +7,9 @@
 
     YOUR OBJECTIVE:
 
-    Take the logic we've defiend in the last two tasks and tie them to the parts 
+    Take the logic we've defined in the last two tasks and tie them to the parts 
     of the code that make the most sense. By the end, you should have a simple webpage 
-    that lets you add todos!
+    that lets you add to-dos!
 
     Most code is already implemented. Only modify the file under the "// YOUR CODE HERE" comments.
     For this file, be sure you understand the sections labeled with "// BE ABLE TO EXPLAIN."
@@ -59,10 +59,13 @@
             
             // BE ABLE TO EXPLAIN what document.getByElementID() does in this context
             const todoInput = document.getElementById('todo-input');
+
+            // this should help get rid of any empty strings
             const createdTodo = todoInput.value.trim();
             
-            // Add non-empty string todos to the todo list
+            // Add non-empty string to-dos to the todo list
             // YOUR CODE HERE 
+            addTodo(createdTodo);
 
             // reset the input value after add todo is clicked.
             todoInput.value = '';
@@ -89,12 +92,19 @@
         }
 
         function deleteTodo(index) {
-            // YOUR CODE HERE (recycle your work from former tasks)
+            //gets rid of the string at the index specified; modifies array
+            todoList.splice(index, 1);
             refreshTodoList()
         }
 
-        function addTodo(todo) {
-            // YOUR CODE HERE (recycle your work from former tasks)
+        function addTodo(todoString) {
+            //checks if string entered is empty; if so, it alerts user
+            if(todoString == "")
+            {
+               alert("Please enter a non-empty input!");
+               return; 
+            }
+            todoList.push(todoString);
             refreshTodoList()
         }
     </script>
